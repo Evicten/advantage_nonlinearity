@@ -1,0 +1,23 @@
+act=linear
+betaU=1.000
+betaV=2.000
+lambda=0.000
+init_m=(0.001,0.001)_q=1.000_V=0.600
+samples=100000
+samples_loss=1000000
+rank=10
+iters=5000
+damp=0.950
+gamma=0.000
+delta=1.000
+solver=grid_search_refined
+steps_solver=25.000
+clip=25.000
+annealing lambda=False
+start_lambda=1
+rate lambda=100
+steps without annealing lambda=500
+annealing alpha=False
+start alpha=10
+rate alpha=10
+steps without annealing alpha=500

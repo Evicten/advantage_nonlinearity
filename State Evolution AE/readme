@@ -1,0 +1,13 @@
+# ERM State Evolution
+
+This repository contains the Python implementation of the State Evolution (SE) equations for Empirical Risk Minimization (ERM) as described in the ICML submission. The code uses **JAX** for efficient computation of the proximal operators and **MPI** for parallelizing the Monte Carlo integration accros multiples cores.
+
+## File Structure
+
+*   `run_ERM_SE.py`: This sets up and call ERM_SE.py to run the SE for ERM. It sets up the parameters, handles the $\alpha$ sweep, and aggregates results.
+*   `ERM_SE.py`: Contains the JAX-based proximal solvers, the MC integration, and the state evolution update equations.
+*   `results_SE_ERM/`: Contains the results of the various SE runs (not included for size), as well as a text file containing the parameters used to obtain them
+*   `downstream_task_theoretical.ipynb`: Notebook implementing the computation of the downstram task results.
+
+ **JAX:** The code is compatible with both CPU and GPU. If a GPU is detected, JAX will use it automatically. If not, it falls back to CPU.
+ **MPI:** The code uses `mpi4py`. If you run the code without an MPI launcher (like `mpiexec`), it will run as a single process (Rank 0).
